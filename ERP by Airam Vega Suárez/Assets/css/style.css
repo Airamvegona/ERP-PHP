@@ -1,0 +1,522 @@
+/* General */
+*{
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+}
+h2{
+    width: 100%;
+    max-height: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+.cerrar-sesion-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #CCC1AD;
+ 
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando el cursor pasa sobre el botón */
+.cerrar-sesion-btn:hover {
+    background-color: #4d3a19; /* Color de fondo más oscuro */
+}
+
+/* Estilo cuando se presiona el botón */
+.cerrar-sesion-btn:active {
+    background-color: #504024; /* Color de fondo aún más oscuro */
+}
+
+/* Header & Footer*/
+#header{
+    width: 100%;
+    top: 0;
+    color: whitesmoke;
+    background-color: #82683B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 1);
+}
+#footer{
+    width: 100%;
+    bottom: 0;
+    color: whitesmoke;
+    background-color: #82683B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.m2{
+    margin: 2%;
+}
+.w100{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+}
+
+/* Contenedores */
+.contenedor0{
+    width: 100%;
+    padding-bottom: 5%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #D9D9D9;
+}
+
+.contenedor1{
+    display: flex;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 90%;
+    border-radius: 4px;
+    background-color: #CCC1AD;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Index */
+.indexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.indexCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+    width: 25%;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.indexCard div{
+    background-color:#BA9D6D;
+    border-radius: 10px;
+    margin-top: 4%;
+   
+    padding: 2%;
+}
+
+/* Tabla */
+.crearBorrar{
+    display: flex;
+    
+    width: 90%;
+}
+
+.borrarcrear{
+    margin: 5px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #82683B;
+    color: white; 
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.atras{
+    margin: 5px 5px;
+   
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #82683B;
+    
+    cursor: pointer;
+    
+}
+
+.tabla{
+    margin-top: 2%;
+    margin-left: 5px;
+    width: 100%;
+    background-color: #D9D9D9;
+    padding: 2%;
+    border-radius: 4px;
+}
+.tabla tbody tr:nth-child(even) {
+    background-color: #D9D9D9;
+}
+.tabla tbody tr:nth-child(odd) {
+    background-color: #CCC1AD;
+}
+.tabla th {
+    padding: 10px;
+}
+.tabla td {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* Ventana Modal */
+#modalContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalWindow {
+    position: fixed;
+    width: 60%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background-color: #CCC1AD;
+    padding: 20px;
+    border-radius: 5px;
+}
+#modalWindow form{
+    width: 40%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#modalWindow form input{
+    width: 100%;
+    margin: 5%;
+    padding: 5%;
+    background-color: #CCC1AD;
+    color: black;
+    font-size: 16px;
+    border: 1px solid #82683B;
+    border-radius: 24px;
+}
+#closeBtn {
+    padding: 0.2%;
+}
+
+
+.pedido{
+    margin-top: 2%;
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 4px;
+    display: inline-block;
+}
+.pedido button{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.pedido form{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pedido form label{
+    margin-left: 1%;
+}
+
+.hidden{
+    display: none;
+}
+
+.col-3,.col-4,.col-5,.col-6, .col-7, .col-12{
+    padding: 20px 0px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+
+    .col-yeka {width:33,33%}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+footer div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gold;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* LOGIN Y REGISTRO */
+
+/* Estilos generales */
+#bodyLogin {
+    background-image: url(../images/fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: #BA9D6D;
+    margin-top: 60px;
+
+    margin-bottom: 60px;
+    font-size: 3em;
+}
+ 
+.d-flex{
+    display: flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    #seccionLogin {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        margin: auto;
+    }
+    
+    #seccionRegistro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        margin: auto;
+    }
+}
+
+
+/* Estilos para pantallas grandes (desktops) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+      #seccionLogin {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        margin: auto;
+    }
+    
+    #seccionRegistro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        margin: auto;
+    }
+}
+
+
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media only screen and (max-width: 767px) {
+    #seccionLogin {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #seccionRegistro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #CCC1AD;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #82683B;
+    color: whitesmoke;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #D9D9D9;
+}
+
+/* Estilos específicos para el contenedor principal */
+
+/* Estilos específicos para el botón "Registrarse" */
+#btnMostrarRegistro {
+    background-color: #82683B;
+    color: whitesmoke;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btnMostrarRegistro:hover {
+    background-color: #D9D9D9;
+}
+
+/* Estilos específicos para el botón "Inicio de Sesión" */
+#btnMostrarInicioDeSesion {
+    background-color: #82683B;
+    color: whitesmoke;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btnMostrarInicioDeSesion:hover {
+    background-color: #D9D9D9;
+}
+
+.registro-form {
+    width: 40%; /* Ajusta el ancho según tus preferencias */
+    margin: 40px auto; /* Centra el formulario y agrega margen superior e inferior */
+}
+
+#loginButton, #registroButton{
+    width: 100%;
+    margin: 10px;
+}
+
+#registroResponse, #loginResponse{
+    margin: 10px;
+}
+
+@media (max-width: 576px) { 
+    
+    .col-yeka {
+        width: 100%;
+    }
+    header {
+        display: inline-block;
+    }
+    .col-3 {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .col-4, .col-8 {
+        width: 100%;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    .borrarcrear{
+        padding: 5px 0px;
+    }
+    .atras{ 
+        height: 28px 0px;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) { 
+    
+    header {
+        display: inline-block;
+    }
+    .col-3 {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .col-4, .col-8 {
+        width: 100%;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+    .borrarcrear{
+        padding: 5px 0px;
+    }
+    .col-yeka {
+        width: 40%;
+    }
+    .atras{ 
+        height: 28px 0px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { 
+   
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    
+    nav {
+        text-align: right;
+    }
+}
